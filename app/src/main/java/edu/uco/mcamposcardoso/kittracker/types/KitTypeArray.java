@@ -3,6 +3,8 @@ package edu.uco.mcamposcardoso.kittracker.types;
 import org.springframework.util.MultiValueMap;
 
 import org.springframework.util.LinkedMultiValueMap;
+
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -13,25 +15,26 @@ public class KitTypeArray {
     public List<String> kits = Arrays.asList("Endodontia", "Cirurgia",
             "Bandeja A", "Periodontia", "Cirurgia G", "Bandeja B", "Prótese (G) A", "Prótese", "Prótese A",
             "Prótese B", "Prótese (G) B", "Bandeja B", "Bandeja C", "Bandeja D", "Bandeja E", "Dentística",
-            "Dentística G", "Brocas", "Ex. Clín.", "Ex. Clín. A", "Ex. Clín. B", "Grampos", "Isolamento",
+            "Dentística G", "Brocas", "Ex. Clín.", "Ex. Clín. A", "Ex. Clín. B", "Grampos", "Isolamento", //23
             "Dentística A", "Dentística B", "Ortodontia G", "Ortodontia", "Posicionadores", "Prótese G",
             "Moldeiras", "Moldeiras G", "Ex. Clín. C", "Implante", "Seleção", "Prótese C", "Seleção G",
-            "Protético", "Moldeiras A (G)", "Periodontia C", "Afastadores", "Periodontia G", "Bandeja F",
-            "Extração", "Periodontia A", "Periodontia B", "Broqueiro", "Caneta", "Bandeja G", "Moldeiras B (G)",
+            "Protético", "Moldeiras A (G)", "Periodontia C", "Afastadores", "Periodontia G", "Bandeja F", //42
+            "Extração", "Periodontia A", "Periodontia B", "Broqueiro", "Caneta", "Bandeja G", "Moldeiras B (G)", //49
             "Posicionadores B", "Moldeiras G (A)", "Posicionadores A", "Moldeiras G (B)", "Posicion. Endo",
             "Rem. de Sutura", "Bandeja H", "Bandeja K", "Ortodontia A", "Ortodontia B", "Ortodontia C",
-            "Odontopediatria A", "OdontoPediatria B", "Moldeiras Adulto", "Dentística D", "Dentística E",
+            "Odontopediatria A", "OdontoPediatria B", "Moldeiras Adulto", "Dentística D", "Dentística E", //65
             "Ex. Clín. D", "Ex Clín. E", "Ex. Clín. F", "Ex. Clín. G", "Cirurgia A", "Remoção C", "Bandeja I",
-            "Bandeja J", "Cirurgia Completa A", "Cirurgia Completa B", "Cirurgia Completa C", "Isolamento A",
+            "Bandeja J", "Cirurgia Completa A", "Cirurgia Completa B", "Cirurgia Completa C", "Isolamento A", //77
             "Isolamento B", "Dentística C", "Biópsia A", "Biópsia B", "Cirurgia B", "Remoção A", "Remoção B",
-            "Remoção D", "Moldeiras B", "Raspagem", "Moldeiras A", "Kit de Implante", "Diversos", "DTM", "Kit de Implante A",
+            "Remoção D", "Moldeiras B", "Raspagem", "Moldeiras A", "Kit de Implante", "Diversos", "DTM", "Kit de Implante A", //92
             "Kit de Implante B", "Moldeiras Desdentados", "Moldeiras alumínio", "Moldeiras inox", "Diversos G",
-            "Diversos ", "Dentística B (G)", "Fórceps", "Periodontia A", "Periodontia B", "Diversos Plásticos", "Endodontia A",
-            "Endodontia B", "Cirurgia G (B)", "Moldeiras plásticas", "Biópsia C", "Campo");
+            "Diversos ", "Dentística B (G)", "Fórceps", "Periodontia A", "Periodontia B", "Diversos Plásticos", "Endodontia A", //104
+            "Endodontia B", "Cirurgia G (B)", "Moldeiras plásticas", "Biópsia C", "Campo"); //110
+    public ArrayList<String> all_kits = new ArrayList<>();
 
     public KitTypeArray() {
         for(int i = 1; i < kits.size() + 1; i++){
-            if(i == 12 || i == 98 || i == 101 || i == 102){
+            if(i == 12 || i == 98 || i == 101 || i == 102 || i > 110){
                 continue;
             }
             name_to_id.add(kits.get(i - 1), i);
@@ -93,6 +96,71 @@ public class KitTypeArray {
         name_to_id.add("Kit de seleção 1", 231);
         name_to_id.add("Kit de seleção 2", 232);
         name_to_id.add("Kit implante GM 2", 233);
+        name_to_id.add("Moldeiras infantil", 234);
+        name_to_id.add("Kit Implante (P)2", 235);
+        name_to_id.add("kit Implante (M)15", 236);
+        name_to_id.add("Limas", 237);
+        name_to_id.add("Cuba Redonda", 238);
+        name_to_id.add("Kit Implante (G)12", 239);
+        name_to_id.add("Kit de implante C", 240);
+        name_to_id.add("Kit de implante D", 241);
+        name_to_id.add("Triagem 1", 273);
+        name_to_id.add("Triagem 2", 274);
+        name_to_id.add("Triagem 3", 275);
+        name_to_id.add("Triagem 4", 276);
+        name_to_id.add("Triagem 5", 277);
+        name_to_id.add("Triagem 6", 278);
+        name_to_id.add("Triagem 7", 279);
+        name_to_id.add("Triagem 8", 280);
+        name_to_id.add("Triagem 9", 281);
+        name_to_id.add("Triagem 10", 282);
+        name_to_id.add("Triagem 11", 283);
+        name_to_id.add("Triagem 12", 284);
+        name_to_id.add("Triagem 13", 285);
+        name_to_id.add("Triagem 14", 286);
+        name_to_id.add("Triagem 15", 287);
+        name_to_id.add("Triagem 16", 288);
+        name_to_id.add("Triagem 17", 289);
+        name_to_id.add("Triagem 18", 290);
+        name_to_id.add("Triagem 19", 291);
+        name_to_id.add("Triagem 20", 292);
+        name_to_id.add("Triagem 21", 293);
+        name_to_id.add("Triagem 22", 294);
+        name_to_id.add("Bandeja M", 295);
+        name_to_id.add("Bandeja N", 296);
+        name_to_id.add("Bandeja O", 297);
+        name_to_id.add("Bandeja P", 298);
+        name_to_id.add("Bandeja Q", 299);
+        name_to_id.add("Bandeja R", 300);
+        name_to_id.add("Bandeja S", 301);
+        name_to_id.add("Triagem 23", 302);
+        name_to_id.add("Triagem 25", 303);
+        name_to_id.add("Triagem 24", 304);
+        name_to_id.add("Triagem 26", 305);
+        name_to_id.add("Triagem 27", 306);
+        name_to_id.add("Triagem 28", 307);
+        name_to_id.add("Triagem 29", 308);
+        name_to_id.add("Triagem 30", 309);
+        name_to_id.add("Triagem 31", 310);
+        name_to_id.add("Triagem 32", 311);
+        name_to_id.add("Triagem 33", 312);
+        name_to_id.add("Triagem 34", 313);
+        name_to_id.add("Triagem 35", 314);
+        name_to_id.add("Bandeja T", 315);
+        name_to_id.add("Bandeja U", 316);
+        name_to_id.add("Bandeja V", 317);
+        name_to_id.add("Kit Implante (G)13", 318);
+        name_to_id.add("Kit Implante (M)16", 319);
+        name_to_id.add("Triagem 36", 320);
+        name_to_id.add("Kit Implante (M)17", 321);
+        name_to_id.add("Triagem 37", 322);
+        name_to_id.add("Triagem 38", 323);
+        name_to_id.add("Triagem 39", 324);
+        name_to_id.add("Kit Implante (M)18", 325);
+
+        for(String key : name_to_id.keySet()){
+            all_kits.add(key);
+        }
 
         id_to_name.add("142", "Kit implante (P) 1");
         id_to_name.add("143", "Kit implante (M) 1");
@@ -150,5 +218,66 @@ public class KitTypeArray {
         id_to_name.add("231", "Kit de seleção 1");
         id_to_name.add("232", "Kit de seleção 2");
         id_to_name.add("233", "Kit implante GM 2");
+        id_to_name.add("234", "Moldeiras infantil");
+        id_to_name.add("235", "Kit Implante (P)2");
+        id_to_name.add("236", "kit Implante (M)15");
+        id_to_name.add("237", "Limas");
+        id_to_name.add("238", "Cuba Redonda");
+        id_to_name.add("239", "Kit Implante (G)12");
+        id_to_name.add("240", "Kit de implante C");
+        id_to_name.add("241", "Kit de implante D");
+        id_to_name.add("273", "Triagem 1");
+        id_to_name.add("274", "Triagem 2");
+        id_to_name.add("275", "Triagem 3");
+        id_to_name.add("276", "Triagem 4");
+        id_to_name.add("277", "Triagem 5");
+        id_to_name.add("278", "Triagem 6");
+        id_to_name.add("279", "Triagem 7");
+        id_to_name.add("280", "Triagem 8");
+        id_to_name.add("281", "Triagem 9");
+        id_to_name.add("282", "Triagem 10");
+        id_to_name.add("283", "Triagem 11");
+        id_to_name.add("284", "Triagem 12");
+        id_to_name.add("285", "Triagem 13");
+        id_to_name.add("286", "Triagem 14");
+        id_to_name.add("287", "Triagem 15");
+        id_to_name.add("288", "Triagem 16");
+        id_to_name.add("289", "Triagem 17");
+        id_to_name.add("290", "Triagem 18");
+        id_to_name.add("291", "Triagem 19");
+        id_to_name.add("292", "Triagem 20");
+        id_to_name.add("293", "Triagem 21");
+        id_to_name.add("294", "Triagem 22");
+        id_to_name.add("295", "Bandeja M");
+        id_to_name.add("296", "Bandeja N");
+        id_to_name.add("297", "Bandeja O");
+        id_to_name.add("298", "Bandeja P");
+        id_to_name.add("299", "Bandeja Q");
+        id_to_name.add("300", "Bandeja R");
+        id_to_name.add("301", "Bandeja S");
+        id_to_name.add("302", "Triagem 23");
+        id_to_name.add("303", "Triagem 25");
+        id_to_name.add("304", "Triagem 24");
+        id_to_name.add("305", "Triagem 26");
+        id_to_name.add("306", "Triagem 27");
+        id_to_name.add("307", "Triagem 28");
+        id_to_name.add("308", "Triagem 29");
+        id_to_name.add("309", "Triagem 30");
+        id_to_name.add("310", "Triagem 31");
+        id_to_name.add("311", "Triagem 32");
+        id_to_name.add("312", "Triagem 33");
+        id_to_name.add("313", "Triagem 34");
+        id_to_name.add("314", "Triagem 35");
+        id_to_name.add("315", "Bandeja T");
+        id_to_name.add("316", "Bandeja U");
+        id_to_name.add("317", "Bandeja V");
+        id_to_name.add("318", "Kit Implante (G)13");
+        id_to_name.add("319", "Kit Implante (M)16");
+        id_to_name.add("320", "Triagem 36");
+        id_to_name.add("321", "Kit Implante (M)17");
+        id_to_name.add("322", "Triagem 37");
+        id_to_name.add("323", "Triagem 38");
+        id_to_name.add("324", "Triagem 39");
+        id_to_name.add("325", "Kit Implante (M)18");
     }
 }

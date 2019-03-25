@@ -86,9 +86,9 @@ public class ManuallyRegisterKitFragment extends DialogFragment {
         view = inflater.inflate(R.layout.fragment_manually_register_kit, container, false);
 
         kit_types = (Spinner) view.findViewById(R.id.spnKitTypes);
-        Collections.sort(new_kit_type.kits);
+        Collections.sort(new_kit_type.all_kits);
         ArrayAdapter<String> adaptator = new ArrayAdapter<String>(getActivity(),
-                android.R.layout.simple_spinner_dropdown_item, new_kit_type.kits);
+                android.R.layout.simple_spinner_dropdown_item, new_kit_type.all_kits);
 
         kit_types.setAdapter(adaptator);
         getDialog().setCanceledOnTouchOutside(false);
