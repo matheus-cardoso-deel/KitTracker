@@ -13,7 +13,7 @@
         android:id="@+id/linearLayout">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:paddingBottom="20dp"
@@ -24,30 +24,42 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:textSize="30dp"
+                android:textSize="20dp"
                 android:textStyle="bold"
                 android:padding="10dp"
                 />
 
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp"
+            android:layout_gravity="center_horizontal">
+
             <Spinner
-                android:layout_width="420px"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/spnKitTypes" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="820px"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/btnKitCadastroConfirmar"
                 android:layout_width="160dp"
                 android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/toggle_state_on"
                 android:text="Confirmar"
                 android:textSize="20dp"
-                android:background="@drawable/toggle_state_on"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
         </LinearLayout>
 
